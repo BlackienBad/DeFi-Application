@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "faucet-1 . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+    "faucet-2 . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+    "faucet-3 . . . . . ."
+    "faucet-4 . . . . . .";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.faucet-1 { grid-area: faucet-1; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.faucet-2 { grid-area: faucet-2; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.faucet-3 { grid-area: faucet-3; }
 
-.App-link {
-  color: #61dafb;
-}
+.faucet-4 { grid-area: faucet-4; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.liquidity-pool-1 { grid-area: liquidity-pool-1; }
+
+.liquidity-pool-2 { grid-area: liquidity-pool-2; }
