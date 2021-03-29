@@ -27,8 +27,8 @@ const LiquidityPage = () => {
             <div class="faucet-2"><FaucetButton buttonText="Faucet 2" faucet={faucet2}/></div>
             <div class="faucet-3"><FaucetButton buttonText="Faucet 3" faucet={faucet3}/></div>
           </div>
-          <div class="liquidity-pool-1"><LiquidityPoolCard img="./images/elondoge.jpg" swapFunction={swapFunction1}/></div>
-          <div class="liquidity-pool-2"><LiquidityPoolCard img="./images/snoopdoge.jpg" swapFunction={swapFunction2}/></div>
+          <div class="liquidity-pool-1"><LiquidityPoolCard number="1" img="./images/elondoge.jpg" swapFunction={swapFunction1}/></div>
+          <div class="liquidity-pool-2"><LiquidityPoolCard number="2" img="./images/snoopdoge.jpg" swapFunction={swapFunction2}/></div>
         </div>
     </div>
   );
