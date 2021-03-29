@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import { Button , Navbar, Form, FormControl, Nav, NavDropdown, } from 'react-bootstrap';
+import './NavbarSite.css'
 
 const Example = (props) => {
 
@@ -10,8 +12,8 @@ const Example = (props) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Link href="#home">Liquidity Pool</Nav.Link>
-                <Nav.Link href="#link">NFT</Nav.Link>
+                  <Nav.Link><Link to="/" style={{textDecoration: 'none', color: 'white'}}>Liquidity Pool</Link></Nav.Link>
+                  <Nav.Link><Link to="/nft" style={{textDecoration: 'none', color: 'white'}}>NFT</Link></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

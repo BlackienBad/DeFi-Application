@@ -1,0 +1,34 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 3% 3%;
+    grid-template-areas:
+      ". . . . . . . ."
+      ". faucet . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+      ". . . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+      ". . . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+      ". . . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2";
+  }
+  
+  .faucet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 3% 0px;
+    grid-template-areas:
+      "faucet-1 faucet-1 faucet-1"
+      "faucet-2 faucet-2 faucet-2"
+      "faucet-3 faucet-3 faucet-3";
+    grid-area: faucet;
+  }
+  
+  .faucet-1 { grid-area: faucet-1; }
+  
+  .faucet-2 { grid-area: faucet-2; }
+  
+  .faucet-3 { grid-area: faucet-3; }
+  
+  .liquidity-pool-1 { grid-area: liquidity-pool-1; }
+  
+  .liquidity-pool-2 { grid-area: liquidity-pool-2; }
