@@ -1,0 +1,14 @@
+.grid-containerNFT {
+    display: grid;
+    grid-template-columns:0fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
+    gap: 3% 3%;
+    grid-template-areas:
+      ". . . . ."
+      ". NFT-Card-1 NFT-Card-2 NFT-Card-3 NFT-Card-4"
+      ". . . . .";
+  }
+  .NFT-Card-1 { grid-area: NFT-Card-1; }
+  .NFT-Card-2 { grid-area: NFT-Card-2; }
+  .NFT-Card-3 { grid-area: NFT-Card-3; }
+  .NFT-Card-4 { grid-area: NFT-Card-4; }

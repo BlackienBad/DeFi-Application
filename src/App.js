@@ -1,7 +1,6 @@
-import './App.css';
 import Example from './Components/NavbarSite.js';
-import LiquidityPage from './Components/LiquidityPage.js';
-import NFTPage from './Components/NFTPage.js';
+import LiquidityPage from './Components/Pages/LiquidityPage.js';
+import NFTPage from './Components/Pages/NFTPage.js';
 
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
@@ -10,10 +9,8 @@ function App() {
     <div className="App">
       <Router>
         <Example />
-        <Switch>
           <Route path="/nft" component={NFTPage}></Route>
           <Route path="/" exact component={LiquidityPage}></Route>
-        </Switch>
       </Router>
     </div>
   );

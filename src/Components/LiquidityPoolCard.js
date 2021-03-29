@@ -18,7 +18,7 @@ const LiquidityPoolCard = ({number, img, swapFunction}) => {
                 <Form.Group controlId="swap">
                     <Form.Control type="number" name="coinToSwap" placeholder="Coin to swap..." onChange={(e) => handleChange(e) }/>
                 </Form.Group>
-                <Button variant="warning" onClick={() => swapFunction(value)}>swap</Button>
+                <Button variant="warning" onClick={() => swapFunction(value)}>Swap</Button>
             </Card.Body>
         </Card>
     </div>

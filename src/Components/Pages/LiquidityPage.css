@@ -1,0 +1,92 @@
+.grid-containerLiquidity {
+  display: grid;
+  grid-template-columns: 0fr repeat(7, 1fr);
+  grid-template-rows: 0fr repeat(4, 0.5fr);
+  gap: 3% 3%;
+  grid-template-areas:
+    ". . . . . . . ."
+    ". faucet . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+    ". . . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+    ". . . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2"
+    ". . . liquidity-pool-1 liquidity-pool-1 . liquidity-pool-2 liquidity-pool-2";
+}
+.faucet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 3% 0px;
+  grid-template-areas:
+    "faucet-1 faucet-1 faucet-1"
+    "faucet-2 faucet-2 faucet-2"
+    "faucet-3 faucet-3 faucet-3";
+  grid-area: faucet;
+}
+.faucet-1 { grid-area: faucet-1; }
+.faucet-2 { grid-area: faucet-2; }
+.faucet-3 { grid-area: faucet-3; }
+.faucet-4 { grid-area: faucet-4; }
+.liquidity-pool-1 { grid-area: liquidity-pool-1; }
+.liquidity-pool-2 { grid-area: liquidity-pool-2; }
+
+@media all and (-ms-high-contrast:none) {
+
+.grid-container {
+  display: -ms-grid;
+  -ms-grid-columns: 0fr repeat(7, 1fr);
+  -ms-grid-rows: 0fr repeat(4, 0.5fr);
+  gap: 3% 3%;
+}
+
+.faucet {
+  display: -ms-grid;
+  -ms-grid-columns: repeat(3, 1fr);
+  -ms-grid-rows: repeat(4, 1fr);
+  gap: 3% 0px;-ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+}
+
+.faucet-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.faucet-2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.faucet-3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+.faucet-4 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 0;
+}
+
+.liquidity-pool-1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+}
+
+.liquidity-pool-2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 7;
+}
+
+}
