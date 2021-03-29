@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Card, Button, Form } from 'react-bootstrap';
+import React from 'react';
+import { Card, Button } from 'react-bootstrap';
 
 const NFTCard = ({img, mintFunction, text}) => {
   return (

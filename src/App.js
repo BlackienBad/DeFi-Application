@@ -2,7 +2,7 @@ import Example from './Components/NavbarSite.js';
 import LiquidityPage from './Components/Pages/LiquidityPage.js';
 import NFTPage from './Components/Pages/NFTPage.js';
 
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   return (
