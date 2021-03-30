@@ -64,6 +64,15 @@ const BalancePage = () => {
         }
   return (
     <div>
+        <div class="grid-container">
+            <div class="balance-doge">Doge Balance: {balanceOfDoge}</div>
+            <div class="balance-elon">Elon Balance: {balanceOfElon}</div>
+            <div class="balance-snoop">Snoop Balance: {balanceOfSnoop}</div>
+            <div class="balance-ed">ElonDoge Balance: {balanceOfElonDoge}</div>
+            <div class="balance-sd">SnoopDoge Balance: {balanceOfSnoopDoge}</div>
+            <div class="staked-1">Coin locked in the first contract(by everyone): {stakedOfElonDoge}</div>
+            <div class="staked-2">Coin locked in the second contract(by everyone): {stakedOfSnoopDoge}</div>
+        </div>
     </div>
   );
 }

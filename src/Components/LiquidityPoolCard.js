@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Card, Button, Form } from 'react-bootstrap';
 
-const LiquidityPoolCard = ({number, img, swapFunction}) => {
+const LiquidityPoolCard = ({number, img, swapFunction, unswapFunction}) => {
   const [value, setValue] = useState(0);
   const handleChange = (e) => {    
       setValue(e.target.value);  
@@ -19,6 +19,8 @@ const LiquidityPoolCard = ({number, img, swapFunction}) => {
                     <Form.Control type="number" name="coinToSwap" placeholder="Coin to swap..." onChange={(e) => handleChange(e) }/>
                 </Form.Group>
                 <Button variant="warning" onClick={() => swapFunction(value)}>Swap</Button>
+                <Card.Text></Card.Text>
+                <Button variant="warning" onClick={() => unswapFunction()}>Unswap</Button>
             </Card.Body>
         </Card>
     </div>
