@@ -13,8 +13,9 @@ const Example = ({account}) => {
                 <Nav className="mr-auto">
                   <Nav.Link><Link to="/" style={{textDecoration: 'none', color: '#ffb805'}}>Liquidity Pool</Link></Nav.Link>
                   <Nav.Link><Link to="/nft" style={{textDecoration: 'none', color: '#ffb805'}}>NFT</Link></Nav.Link>
+                  <Nav.Link><Link to="/balance" style={{textDecoration: 'none', color: '#ffb805'}}> Balance </Link></Nav.Link>
                 </Nav>
-                <Navbar.Text> account: {account} </Navbar.Text>
+                <Navbar.Text>account: {account}</Navbar.Text>
             </Navbar.Collapse>
         </Navbar>
     </div>
