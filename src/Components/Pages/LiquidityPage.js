@@ -10,6 +10,7 @@ import TokenLP1 from '../../abis/TokenLP1.json';
 import TokenLP2 from '../../abis/TokenLP2.json';
 import ElonDogeLP from '../../abis/ElonDogeLP.json';
 import SnoopDogeLP from '../../abis/SnoopDogeLP.json';
+import {dogeAddress, elonAddress, snoopAddress, tokenLP1Address, tokenLP2Address, elonDogeAddress, snoopDogeAddress} from '../../Constants/ContractAddresses.js';
 
 const LiquidityPage = () => {
   const [account, setAccount] = useState(null);
@@ -20,13 +21,8 @@ const LiquidityPage = () => {
   const [tokenLP2, setTokenLP2] = useState();
   const [elonDoge, setElonDoge] = useState();
   const [snoopDoge, setSnoopDoge] = useState();
-  const [balanceOfDoge, setBalanceOfDoge] = useState(0);
-  const [balanceOfElon, setBalanceOfElon] = useState(0);
-  const [balanceOfSnoop, setBalanceOfSnoop] = useState(0);
   const [balanceOfElonDoge, setBalanceOfElonDoge] = useState(0);
   const [balanceOfSnoopDoge, setBalanceOfSnoopDoge] = useState(0);
-  const [stakedOfElonDoge, setStakedOfElonDoge] = useState(0);
-  const [stakedOfSnoopDoge, setStakedOfSnoopDoge] = useState(0);
   useEffect(() => {
 		loadWeb3();
     loadRopstenData();
@@ -49,59 +45,51 @@ const LiquidityPage = () => {
       const web3 = window.web3
       const accounts = await web3.eth.getAccounts()
       setAccount(accounts[0])
-      const dogeToken = new web3.eth.Contract(Doge.abi, '0x1D3371dC80Ec16Cc79F17A56e41e9c3a5Fe45aEE')
+      const dogeToken = new web3.eth.Contract(Doge.abi, dogeAddress)
       setDoge(dogeToken);
-      const elonToken = new web3.eth.Contract(Elon.abi, '0xa396aDD4C60aF488e8d91fC46B14D71c0A7624Ec')
+      const elonToken = new web3.eth.Contract(Elon.abi, elonAddress)
       setElon(elonToken);
-      const snoopToken = new web3.eth.Contract(Snoop.abi, '0x6119c3A7229Fa835bfEFA3b089613bFD92578288')
+      const snoopToken = new web3.eth.Contract(Snoop.abi, snoopAddress)
       setSnoop(snoopToken);
-      const token1 = new web3.eth.Contract(TokenLP1.abi, '0xC273a3f9cD94eA320a34Ba2aE0b0E17323f8f06f')
+      const token1 = new web3.eth.Contract(TokenLP1.abi, tokenLP1Address)
       setTokenLP1(token1)
-      const token2 = new web3.eth.Contract(TokenLP2.abi, '0xacb030B05E074181405c065f03A2FACc7b6931A2')
+      const token2 = new web3.eth.Contract(TokenLP2.abi, tokenLP2Address)
       setTokenLP2(token2)
-      const elonDogeToken = new web3.eth.Contract(ElonDogeLP.abi, '0x4d4201de2e35A10D73Be5Daa4CE4a7c4eE2E9628')
+      const elonDogeToken = new web3.eth.Contract(ElonDogeLP.abi, elonDogeAddress)
       setElonDoge(elonDogeToken)
-      const snoopDogeToken = new web3.eth.Contract(SnoopDogeLP.abi, '0xaE2f951BbB7E2A9B4356B4934884D078654d11B9')
+      const snoopDogeToken = new web3.eth.Contract(SnoopDogeLP.abi, snoopDogeAddress)
       setSnoopDoge(snoopDogeToken)
       if(accounts[0] !== undefined){
-        setBalanceOfDoge(await dogeToken.methods.balanceOf(accounts[0]).call())
-        setBalanceOfElon(await elonToken.methods.balanceOf(accounts[0]).call())
-        setBalanceOfSnoop(await snoopToken.methods.balanceOf(accounts[0]).call())
         setBalanceOfElonDoge(await token1.methods.balanceOf(accounts[0]).call())
         setBalanceOfSnoopDoge(await token2.methods.balanceOf(accounts[0]).call())
-        setStakedOfElonDoge(await dogeToken.methods.balanceOf('0x4d4201de2e35A10D73Be5Daa4CE4a7c4eE2E9628').call())
-        setStakedOfSnoopDoge(await dogeToken.methods.balanceOf('0xaE2f951BbB7E2A9B4356B4934884D078654d11B9').call())
         }
       }
   const faucet1 = async () => {
     await doge.methods.faucet().send({from: account});
-    setBalanceOfDoge(await doge.methods.balanceOf(account).call())
   }
   const faucet2 = async () => {
     await elon.methods.faucet().send({from: account});
-    setBalanceOfElon(await elon.methods.balanceOf(account).call())
   }
   const faucet3 = async () => {
     await snoop.methods.faucet().send({from: account});
-    setBalanceOfSnoop(await snoop.methods.balanceOf(account).call())
   }
   const swapFunction1 = async (value) => {
-    await doge.methods.approve('0x4d4201de2e35A10D73Be5Daa4CE4a7c4eE2E9628', value).send({from:account});
-    await elon.methods.approve('0x4d4201de2e35A10D73Be5Daa4CE4a7c4eE2E9628', value).send({from:account});
+    await doge.methods.approve(elonDogeAddress, (value * 10**18).toString()).send({from:account});
+    await elon.methods.approve(elonDogeAddress, (value * 10**18).toString()).send({from:account});
     await elonDoge.methods.stakeTokens(value).send({from: account});
   }
   const swapFunction2 = async (value) => {
-    await doge.methods.approve('0xaE2f951BbB7E2A9B4356B4934884D078654d11B9', value).send({from:account});
-    await snoop.methods.approve('0xaE2f951BbB7E2A9B4356B4934884D078654d11B9', value).send({from:account});
+    await doge.methods.approve(snoopDogeAddress, (value * 10**18).toString()).send({from:account});
+    await snoop.methods.approve(snoopDogeAddress, (value * 10**18).toString()).send({from:account});
     await snoopDoge.methods.stakeTokens(value).send({from: account});
   }
   const unswapFunction1 = async () => {
     
-    await tokenLP1.methods.approve('0x4d4201de2e35A10D73Be5Daa4CE4a7c4eE2E9628', balanceOfElonDoge).send({from:account});
+    await tokenLP1.methods.approve(elonDogeAddress, balanceOfElonDoge).send({from:account});
     await elonDoge.methods.unstakeTokens().send({from: account});
   }
-  const unswapFunction2 = async (value) => {
-    await tokenLP2.methods.approve('0xaE2f951BbB7E2A9B4356B4934884D078654d11B9', balanceOfSnoopDoge).send({from:account});
+  const unswapFunction2 = async () => {
+    await tokenLP2.methods.approve(snoopDogeAddress, balanceOfSnoopDoge).send({from:account});
     await snoopDoge.methods.unstakeTokens().send({from: account});
   }
   return (

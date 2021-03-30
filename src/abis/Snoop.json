@@ -296,23 +296,23 @@
     "absolutePath": "/C/Users/Blackie/DeFi-Application/src/Contracts/Snoop.sol",
     "exportedSymbols": {
       "Context": [
-        1249
+        1261
       ],
       "ERC20": [
-        1148
+        1160
       ],
       "IERC20": [
-        1226
+        1238
       ],
       "Snoop": [
-        366
+        372
       ]
     },
-    "id": 367,
+    "id": 373,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 334,
+        "id": 340,
         "literals": [
           "solidity",
           "^",
@@ -325,11 +325,11 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "id": 335,
+        "id": 341,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 367,
-        "sourceUnit": 1149,
+        "scope": 373,
+        "sourceUnit": 1161,
         "src": "71:55:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -339,30 +339,30 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 336,
+              "id": 342,
               "name": "ERC20",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1148,
+              "referencedDeclaration": 1160,
               "src": "148:5:4"
             },
-            "id": 337,
+            "id": 343,
             "nodeType": "InheritanceSpecifier",
             "src": "148:5:4"
           }
         ],
         "contractDependencies": [
-          1148,
-          1226,
-          1249
+          1160,
+          1238,
+          1261
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 366,
+        "id": 372,
         "linearizedBaseContracts": [
-          366,
-          1148,
-          1226,
-          1249
+          372,
+          1160,
+          1238,
+          1261
         ],
         "name": "Snoop",
         "nameLocation": "139:5:4",
@@ -370,7 +370,7 @@
         "nodes": [
           {
             "body": {
-              "id": 352,
+              "id": 358,
               "nodeType": "Block",
               "src": "197:63:4",
               "statements": [
@@ -380,14 +380,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 347,
+                            "id": 353,
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 4294967268,
                             "src": "222:4:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Snoop_$366",
+                              "typeIdentifier": "t_contract$_Snoop_$372",
                               "typeString": "contract Snoop"
                             }
                           }
@@ -395,11 +395,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Snoop_$366",
+                              "typeIdentifier": "t_contract$_Snoop_$372",
                               "typeString": "contract Snoop"
                             }
                           ],
-                          "id": 346,
+                          "id": 352,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -411,14 +411,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 345,
+                            "id": 351,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "214:7:4",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 348,
+                        "id": 354,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -435,7 +435,7 @@
                       },
                       {
                         "hexValue": "31303030303030303030303030303030303030303030",
-                        "id": 349,
+                        "id": 355,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -461,18 +461,18 @@
                           "typeString": "int_const 1000000000000000000000"
                         }
                       ],
-                      "id": 344,
+                      "id": 350,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1029,
+                      "referencedDeclaration": 1041,
                       "src": "208:5:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 350,
+                    "id": 356,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -487,13 +487,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 351,
+                  "id": 357,
                   "nodeType": "ExpressionStatement",
                   "src": "208:44:4"
                 }
               ]
             },
-            "id": 353,
+            "id": 359,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -501,7 +501,7 @@
                 "arguments": [
                   {
                     "hexValue": "536e6f6f70",
-                    "id": 340,
+                    "id": 346,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -517,7 +517,7 @@
                   },
                   {
                     "hexValue": "534e50",
-                    "id": 341,
+                    "id": 347,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -532,12 +532,12 @@
                     "value": "SNP"
                   }
                 ],
-                "id": 342,
+                "id": 348,
                 "modifierName": {
-                  "id": 339,
+                  "id": 345,
                   "name": "ERC20",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1148,
+                  "referencedDeclaration": 1160,
                   "src": "175:5:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -548,18 +548,18 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 338,
+              "id": 344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "172:2:4"
             },
             "returnParameters": {
-              "id": 343,
+              "id": 349,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "197:0:4"
             },
-            "scope": 366,
+            "scope": 372,
             "src": "160:100:4",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -567,7 +567,7 @@
           },
           {
             "body": {
-              "id": 364,
+              "id": 370,
               "nodeType": "Block",
               "src": "296:64:4",
               "statements": [
@@ -576,7 +576,7 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 359,
+                          "id": 365,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -587,7 +587,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 360,
+                        "id": 366,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -602,7 +602,7 @@
                       },
                       {
                         "hexValue": "31303030303030303030303030303030303030",
-                        "id": 361,
+                        "id": 367,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -629,32 +629,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 356,
+                        "id": 362,
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967268,
                         "src": "307:4:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Snoop_$366",
+                          "typeIdentifier": "t_contract$_Snoop_$372",
                           "typeString": "contract Snoop"
                         }
                       },
-                      "id": 358,
+                      "id": 364,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 761,
+                      "referencedDeclaration": 773,
                       "src": "307:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,uint256) external returns (bool)"
                       }
                     },
-                    "id": 362,
+                    "id": 368,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -669,14 +669,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 363,
+                  "id": 369,
                   "nodeType": "ExpressionStatement",
                   "src": "307:45:4"
                 }
               ]
             },
             "functionSelector": "de5f72fd",
-            "id": 365,
+            "id": 371,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -684,25 +684,25 @@
             "nameLocation": "281:6:4",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 354,
+              "id": 360,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "287:2:4"
             },
             "returnParameters": {
-              "id": 355,
+              "id": 361,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "296:0:4"
             },
-            "scope": 366,
+            "scope": 372,
             "src": "272:88:4",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 367,
+        "scope": 373,
         "src": "130:233:4"
       }
     ],
@@ -712,23 +712,23 @@
     "absolutePath": "/C/Users/Blackie/DeFi-Application/src/Contracts/Snoop.sol",
     "exportedSymbols": {
       "Context": [
-        1249
+        1261
       ],
       "ERC20": [
-        1148
+        1160
       ],
       "IERC20": [
-        1226
+        1238
       ],
       "Snoop": [
-        366
+        372
       ]
     },
-    "id": 367,
+    "id": 373,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 334,
+        "id": 340,
         "literals": [
           "solidity",
           "^",
@@ -741,11 +741,11 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "id": 335,
+        "id": 341,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 367,
-        "sourceUnit": 1149,
+        "scope": 373,
+        "sourceUnit": 1161,
         "src": "71:55:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -755,30 +755,30 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 336,
+              "id": 342,
               "name": "ERC20",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1148,
+              "referencedDeclaration": 1160,
               "src": "148:5:4"
             },
-            "id": 337,
+            "id": 343,
             "nodeType": "InheritanceSpecifier",
             "src": "148:5:4"
           }
         ],
         "contractDependencies": [
-          1148,
-          1226,
-          1249
+          1160,
+          1238,
+          1261
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 366,
+        "id": 372,
         "linearizedBaseContracts": [
-          366,
-          1148,
-          1226,
-          1249
+          372,
+          1160,
+          1238,
+          1261
         ],
         "name": "Snoop",
         "nameLocation": "139:5:4",
@@ -786,7 +786,7 @@
         "nodes": [
           {
             "body": {
-              "id": 352,
+              "id": 358,
               "nodeType": "Block",
               "src": "197:63:4",
               "statements": [
@@ -796,14 +796,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 347,
+                            "id": 353,
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 4294967268,
                             "src": "222:4:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Snoop_$366",
+                              "typeIdentifier": "t_contract$_Snoop_$372",
                               "typeString": "contract Snoop"
                             }
                           }
@@ -811,11 +811,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Snoop_$366",
+                              "typeIdentifier": "t_contract$_Snoop_$372",
                               "typeString": "contract Snoop"
                             }
                           ],
-                          "id": 346,
+                          "id": 352,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -827,14 +827,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 345,
+                            "id": 351,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "214:7:4",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 348,
+                        "id": 354,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -851,7 +851,7 @@
                       },
                       {
                         "hexValue": "31303030303030303030303030303030303030303030",
-                        "id": 349,
+                        "id": 355,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -877,18 +877,18 @@
                           "typeString": "int_const 1000000000000000000000"
                         }
                       ],
-                      "id": 344,
+                      "id": 350,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1029,
+                      "referencedDeclaration": 1041,
                       "src": "208:5:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 350,
+                    "id": 356,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -903,13 +903,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 351,
+                  "id": 357,
                   "nodeType": "ExpressionStatement",
                   "src": "208:44:4"
                 }
               ]
             },
-            "id": 353,
+            "id": 359,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -917,7 +917,7 @@
                 "arguments": [
                   {
                     "hexValue": "536e6f6f70",
-                    "id": 340,
+                    "id": 346,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -933,7 +933,7 @@
                   },
                   {
                     "hexValue": "534e50",
-                    "id": 341,
+                    "id": 347,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -948,12 +948,12 @@
                     "value": "SNP"
                   }
                 ],
-                "id": 342,
+                "id": 348,
                 "modifierName": {
-                  "id": 339,
+                  "id": 345,
                   "name": "ERC20",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 1148,
+                  "referencedDeclaration": 1160,
                   "src": "175:5:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -964,18 +964,18 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 338,
+              "id": 344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "172:2:4"
             },
             "returnParameters": {
-              "id": 343,
+              "id": 349,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "197:0:4"
             },
-            "scope": 366,
+            "scope": 372,
             "src": "160:100:4",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -983,7 +983,7 @@
           },
           {
             "body": {
-              "id": 364,
+              "id": 370,
               "nodeType": "Block",
               "src": "296:64:4",
               "statements": [
@@ -992,7 +992,7 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 359,
+                          "id": 365,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -1003,7 +1003,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 360,
+                        "id": 366,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1018,7 +1018,7 @@
                       },
                       {
                         "hexValue": "31303030303030303030303030303030303030",
-                        "id": 361,
+                        "id": 367,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1045,32 +1045,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 356,
+                        "id": 362,
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967268,
                         "src": "307:4:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Snoop_$366",
+                          "typeIdentifier": "t_contract$_Snoop_$372",
                           "typeString": "contract Snoop"
                         }
                       },
-                      "id": 358,
+                      "id": 364,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 761,
+                      "referencedDeclaration": 773,
                       "src": "307:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (address,uint256) external returns (bool)"
                       }
                     },
-                    "id": 362,
+                    "id": 368,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1085,14 +1085,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 363,
+                  "id": 369,
                   "nodeType": "ExpressionStatement",
                   "src": "307:45:4"
                 }
               ]
             },
             "functionSelector": "de5f72fd",
-            "id": 365,
+            "id": 371,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1100,25 +1100,25 @@
             "nameLocation": "281:6:4",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 354,
+              "id": 360,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "287:2:4"
             },
             "returnParameters": {
-              "id": 355,
+              "id": 361,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "296:0:4"
             },
-            "scope": 366,
+            "scope": 372,
             "src": "272:88:4",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 367,
+        "scope": 373,
         "src": "130:233:4"
       }
     ],
@@ -1188,7 +1188,7 @@
     }
   },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2021-03-30T09:15:34.684Z",
+  "updatedAt": "2021-03-30T20:35:16.754Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
