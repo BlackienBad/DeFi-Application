@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# DeFi Application
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Faucet
+![Gif](https://media.giphy.com/media/l6J2sUm4TSdCSuuHb9/source.gif)<br/><br/>
 
-## Available Scripts
+# Liquidity pool swap
+![Gif](https://media.giphy.com/media/y0Baa3zhWtDgpvQmmP/source.gif)<br/><br/>
 
-In the project directory, you can run:
+# mint NFT
+![Gif](https://media.giphy.com/media/hlIjavR1yErdkLHCoM/source.gif)<br/><br/>
 
-### `npm start`
+Developed using:<br/>
+-[Ganache](https://www.trufflesuite.com/ganache) to simulate a local blockchain<br/>
+-[Truffle](https://www.trufflesuite.com/) to compile and migrate the smart contracts<br/>
+-[Solidity](https://docs.soliditylang.org/) as a compiler for the smart contracts<br/>
+-[Web3](https://web3js.readthedocs.io) to connect the front-end to the blockchain<br/>
+-[React](https://it.reactjs.org/) for the front-end<br/>
+-[Mocha](https://mochajs.org/) for testing (not implemented yet)<br/>
+-[OpenZeppelin](https://openzeppelin.com/) for the library<br/>
+-[HDWallet-provider](https://www.npmjs.com/package/@truffle/hdwallet-provider) used in the migration<br/>
+-[Infura](https://infura.io/) I didn't wanted to create a local node in the testnet of Ropsten, so I used infura to have a node webhosted<br/>
+-[Ropsten Testnet](https://faucet.ropsten.be/) faucet for the Ropsten testnet<br/><br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I used the library OpenZeppelin to develop an ERC20 token (in Solidity) in a few lines of code, and also the library for ERC721 to create NFT, added a function so that the token can work as a faucet, and another contract to work as a liquidity pool swap, after that I used Truffle to compile and migrate (to Ganache) the smart contract, there 2 available networks, the Ropsten Testnet or a local blockchain using Ganache, Web3 was then used to connect React with Ganache through Metamask
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed in my free time in a few days just as a joke
