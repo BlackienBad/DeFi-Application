@@ -5,3 +5,4 @@ export const tokenLP1Address = '0xb64e54023314649DD56F5DeFdD86357cdA39A6E5';
 export const tokenLP2Address = '0xb6027581B5eBC6b51Af46113aE25EE2F1F38cB85';
 export const elonDogeAddress = '0x9D2723a1c5e675773d63bca4CF9004B6aFa8A393';
 export const snoopDogeAddress = '0x4084DCC2280cC8c905ce8F6E1A7b3c5A98bd393B';
+export const mintNFTAddress = '0x7c57A29c9251dB477E13d50094Da52B03794Ec60';

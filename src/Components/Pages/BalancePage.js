@@ -1,12 +1,14 @@
 import './BalancePage.css'
 import React, {useState, useEffect} from 'react';
 import Web3 from 'web3';
+import CollectionPage from './CollectionPage.js';
 import Doge from '../../abis/Doge.json';
 import Elon from '../../abis/Elon.json';
 import Snoop from '../../abis/Snoop.json';
 import TokenLP1 from '../../abis/TokenLP1.json';
 import TokenLP2 from '../../abis/TokenLP2.json';
-import {dogeAddress, elonAddress, snoopAddress, tokenLP1Address, tokenLP2Address, elonDogeAddress, snoopDogeAddress} from '../../Constants/ContractAddresses.js';
+import MintNFT from '../../abis/MintNFT.json';
+import {dogeAddress, elonAddress, snoopAddress, tokenLP1Address, tokenLP2Address, elonDogeAddress, snoopDogeAddress, mintNFTAddress} from '../../Constants/ContractAddresses.js';
 
 
 const BalancePage = () => {
@@ -24,6 +26,8 @@ const BalancePage = () => {
     const [balanceOfSnoopDoge, setBalanceOfSnoopDoge] = useState(0);
     const [stakedOfElonDoge, setStakedOfElonDoge] = useState(0);
     const [stakedOfSnoopDoge, setStakedOfSnoopDoge] = useState(0);
+    const [balanceOfURIs, setBalanceOfURIs] = useState(0);
+    const [tokenURIs, setTokenURIs] = useState([]);
   useEffect(() => {
 		loadWeb3();
         loadRopstenData();
@@ -51,7 +55,9 @@ const BalancePage = () => {
         const snoopToken = new web3.eth.Contract(Snoop.abi, snoopAddress)
         const tokenLP1 = new web3.eth.Contract(TokenLP1.abi, tokenLP1Address)
         const tokenLP2 = new web3.eth.Contract(TokenLP2.abi, tokenLP2Address)
+        const mintNFTToken = new web3.eth.Contract(MintNFT.abi, mintNFTAddress)
         if(accounts[0] !== undefined){
+            setBalanceOfURIs(await mintNFTToken.methods.returnTotalSupply().call());
             setBalanceOfDoge(await dogeToken.methods.balanceOf(accounts[0]).call() / 1000000000000000000)
             setBalanceOfElon(await elonToken.methods.balanceOf(accounts[0]).call() / 1000000000000000000)
             setBalanceOfSnoop(await snoopToken.methods.balanceOf(accounts[0]).call() / 1000000000000000000)
@@ -59,6 +65,8 @@ const BalancePage = () => {
             setBalanceOfSnoopDoge(await tokenLP2.methods.balanceOf(accounts[0]).call() / 1000000000000000000)
             setStakedOfElonDoge(await dogeToken.methods.balanceOf(elonDogeAddress).call() / 1000000000000000000)
             setStakedOfSnoopDoge(await dogeToken.methods.balanceOf(snoopDogeAddress).call() / 1000000000000000000)
+            setTokenURIs(await mintNFTToken.methods.returnTokenURIsOfOwner().call());
+            console.log(tokenURIs)
             }
         }
   return (
